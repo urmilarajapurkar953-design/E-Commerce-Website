@@ -1,0 +1,99 @@
+/* MAIN NEWSLETTER SECTION */
+.newsletter {
+  width: 100%;
+  max-width: 1000px;
+  margin: 120px auto;
+  padding: 70px 50px;
+  background:
+    radial-gradient(circle at top left, #ffe3e3, transparent 60%),
+    radial-gradient(circle at bottom right, #e3f2ff, transparent 60%),
+    linear-gradient(135deg, #ffffff, #f9fbff);
+  border-radius: 24px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* HEADING */
+.newsletter h1 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* SUB TEXT */
+.newsletter p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 45px;
+}
+
+/* INPUT + BUTTON CONTAINER */
+.newsletter div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+/* EMAIL INPUT */
+.newsletter input {
+  width: 320px;
+  padding: 15px 22px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* INPUT FOCUS EFFECT */
+.newsletter input:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 0 4px rgba(255, 77, 77, 0.15);
+}
+
+/* SUBSCRIBE BUTTON */
+.newsletter button {
+  padding: 15px 38px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(90deg, #ff4d4d, #ff9800, #ffeb3b);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+.newsletter button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 77, 77, 0.45);
+}
+
+/* BUTTON ACTIVE (CLICK) */
+.newsletter button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(255, 77, 77, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .newsletter h1 {
+    font-size: 28px;
+  }
+
+  .newsletter div {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .newsletter button {
+    width: 100%;
+    max-width: 220px;
+  }
+}

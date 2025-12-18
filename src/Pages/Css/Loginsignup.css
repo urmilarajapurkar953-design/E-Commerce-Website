@@ -1,0 +1,126 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* MAIN WRAPPER */
+.loginsignup {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* CARD */
+.loginsignup-container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff; /* plain white */
+  padding: 40px 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* TITLE */
+.loginsignup-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* INPUT GROUP */
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUTS */
+.loginsignup-fields input[type="text"],
+.loginsignup-fields input[type="email"],
+.loginsignup-fields input[type="password"] {
+  width: 100%;
+  height: 45px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.loginsignup-fields input:focus {
+  border-color: #1d2671;
+  outline: none;
+}
+
+/* CHECKBOX + TERMS */
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.loginsignup-agree input {
+  accent-color: #1d2671;
+  width: 16px;
+  height: 16px;
+}
+
+/* BUTTON */
+.loginsignup-fields button {
+  width: 100%;
+  height: 46px;
+  background: #1d2671;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.loginsignup-fields button:hover {
+  opacity: 0.9;
+}
+
+/* LOGIN LINK */
+.loginsignup-login {
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  margin-top: 15px;
+}
+
+.loginsignup-login span {
+  color: #1d2671;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loginsignup-login span:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .loginsignup-container {
+    padding: 30px 20px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 22px;
+  }
+
+  .loginsignup-fields button {
+    font-size: 14px;
+  }
+}

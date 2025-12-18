@@ -1,0 +1,118 @@
+/* MAIN SECTION */
+.popular {
+  width: 100%;
+  max-width: 1200px; /* Restrict the max width */
+  margin: 100px auto 50px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding: 0 20px; /* Add some padding on sides */
+}
+
+.popular h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* COLORFUL GRADIENT UNDERLINE */
+.popular h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff6f61, #ffbc42, #6a82fb, #ff6f61);
+}
+
+/* ITEMS GRID */
+.popular-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px;
+  justify-items: center; /* Center items in columns */
+  margin-top: 40px;
+}
+
+/* SINGLE ITEM CARD */
+.item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%; /* Make each item full width of column */
+  max-width: 350px; /* Optional: limit max width for each card */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hover Effect */
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ITEM NAME */
+.item p {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* PRICE CONTAINER */
+.item-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* NEW PRICE */
+.item-price-new {
+  font-size: 18px;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+/* OLD PRICE */
+.item-price-old {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* RESPONSIVE – TABLET VIEW */
+@media (max-width: 900px) {
+  .popular-items {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+/* RESPONSIVE – MOBILE VIEW */
+@media (max-width: 600px) {
+  .popular-items {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

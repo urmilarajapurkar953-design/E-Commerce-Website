@@ -1,0 +1,151 @@
+/* MAIN HERO SECTION */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+
+  background: linear-gradient(135deg, #ffe9e9, #fff4e6, #ffe7d6);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideLeft 1.2s ease;
+}
+
+.hero-left h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* HAND ICON TEXT */
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-hand-icon img {
+  width: 40px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.hero-left p {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+/* BUTTON */
+.hero-latest-button {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: black;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 35px;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make your icon white */
+.hero-latest-button img {
+  width: 20px;
+  filter: brightness(0) invert(1);   /* <<— makes the icon white */
+}
+
+/* Hover effect */
+.hero-latest-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  animation: slideRight 1.2s ease;
+}
+
+.hero-right img {
+  width: 480px;
+  height: 600px;
+  object-fit: contain;
+  border-radius: 80px;
+  transition: transform 0.5s ease;
+  margin-top: 2cm;
+}
+
+/* Slight zoom on hover */
+.hero-right img:hover {
+  transform: scale(1.03);
+}
+
+/* ----------------- ANIMATIONS ----------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: auto;
+    padding: 40px;
+  }
+
+  .hero-right img {
+    width: 330px;
+  }
+
+  .hero-left h2 {
+    font-size: 32px;
+  }
+
+  .hero-left p {
+    font-size: 22px;
+  }
+}
