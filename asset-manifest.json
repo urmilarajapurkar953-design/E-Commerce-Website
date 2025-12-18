@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/University-Website/static/css/main.050c5dfd.css",
-    "main.js": "/University-Website/static/js/main.c189576e.js",
-    "index.html": "/University-Website/index.html",
-    "main.050c5dfd.css.map": "/University-Website/static/css/main.050c5dfd.css.map",
-    "main.c189576e.js.map": "/University-Website/static/js/main.c189576e.js.map"
+    "main.css": "/E-Commerce-Website/static/css/main.050c5dfd.css",
+    "main.js": "/E-Commerce-Website/static/js/main.c189576e.js",
+    "index.html": "/E-Commerce-Website/index.html",
+    "main.050c5dfd.css.map": "/E-Commerce-Website/static/css/main.050c5dfd.css.map",
+    "main.c189576e.js.map": "/E-Commerce-Website/static/js/main.c189576e.js.map"
   },
   "entrypoints": [
     "static/css/main.050c5dfd.css",
