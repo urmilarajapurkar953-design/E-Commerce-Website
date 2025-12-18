@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Shopcategory from './Pages/Shopcategory';
 import Shop from './Pages/Shop';
 import Product from './Pages/Product';
@@ -11,22 +11,17 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Shop />} />
-          <Route path='/womens' element={<Shopcategory category="Women" />} />
-          <Route path='/mens' element={<Shopcategory category="Men" />} />
-          <Route path='/kids' element={<Shopcategory category="Kids" />} />
-          
-          {/* ✅ Key added to force remount when URL changes */}
-          <Route path='/product/:id' element={<Product key={window.location.pathname} />} />
-
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Loginsignup />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Shop />} />
+        <Route path='/womens' element={<Shopcategory category="Women" />} />
+        <Route path='/mens' element={<Shopcategory category="Men" />} />
+        <Route path='/kids' element={<Shopcategory category="Kids" />} />
+        <Route path='/product/:id' element={<Product />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/login' element={<Loginsignup />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
