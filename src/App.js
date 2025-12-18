@@ -10,19 +10,19 @@ import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Shop />} />
-        <Route path='/womens' element={<Shopcategory category="Women" />} />
-        <Route path='/mens' element={<Shopcategory category="Men" />} />
-        <Route path='/kids' element={<Shopcategory category="Kids" />} />
-        <Route path='/product/:id' element={<Product />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/login' element={<Loginsignup />} />
+        <Route path="/" element={<Shop />} />
+        <Route path="/womens" element={<Shopcategory category="Women" />} />
+        <Route path="/mens" element={<Shopcategory category="Men" />} />
+        <Route path="/kids" element={<Shopcategory category="Kids" />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Loginsignup />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
